@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding on Demand Studio | Soluciones Digitales Premium</title>
+    <meta name="description" content="Diseño moderno y soluciones funcionales para freelancers y negocios locales. Premium, accesible y orientado a resultados.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    <div class="glow-bg"></div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                Branding on Demand
+            </div>
+            <nav class="desktop-nav">
+                <a href="#services">Servicios</a>
+                <a href="#portfolio">Portafolio</a>
+                <a href="#pricing">Precios</a>
+            </nav>
+            <a href="#hero-form" class="btn btn-outline btn-sm nav-cta">Cotizar Proyecto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO + 2. FORMULARIO -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge">Premium Accesible &centerdot; Rápido</div>
+                    <h1 class="headline">Diseño web que <span class="accent-text">Convierte Visitas</span> en Clientes Reales</h1>
+                    <p class="subheadline">Creación de sitios y soluciones digitales para freelancers y negocios locales. Dejamos las complicaciones atrás y nos enfocamos en tus resultados.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#hero-form" class="btn btn-primary btn-lg">
+                            Solicitar cotización
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <p class="micro-trust"><i data-lucide="shield-check"></i> Proceso simple. Implementación rápida.</p>
+                    </div>
+
+                    <!-- 7. CONFIANZA / BULLETS -->
+                    <div class="trust-bullets">
+                        <div class="trust-item"><i data-lucide="smartphone"></i> <span>Diseño Responsive</span></div>
+                        <div class="trust-item"><i data-lucide="zap"></i> <span>Entrega Rápida</span></div>
+                        <div class="trust-item"><i data-lucide="headphones"></i> <span>Soporte Incluido</span></div>
+                        <div class="trust-item"><i data-lucide="trending-up"></i> <span>Enfoque en Negocio</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-form-wrapper" id="hero-form">
+                    <div class="form-card">
+                        <h3>Cuentanos de tu proyecto</h3>
+                        <p class="form-subtitle">Enviaremos una propuesta enseguida.</p>
+                        <form id="leadForm" class="lead-form">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" required placeholder="Tu nombre o empresa">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project-type">Tipo de proyecto</label>
+                                <div class="select-wrapper">
+                                    <select id="project-type" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="negocio">Negocio Local</option>
+                                        <option value="portfolio">Portafolio / CV</option>
+                                        <option value="landing">Landing Page</option>
+                                        <option value="e-commerce">E-commerce</option>
+                                        <option value="otro">Otro tipo de sistema</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="select-icon"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="needs">¿Qué necesitas crear?</label>
+                                <input type="text" id="needs" required placeholder="Ej: Una landing para captar leads">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-info">Email o Teléfono</label>
+                                <input type="text" id="contact-info" required placeholder="email@ejemplo.com o +54 9...">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Enviar Solicitud
+                            </button>
+                            <p class="form-trust-text"><i data-lucide="clock"></i> Respondemos en menos de 24 horas</p>
+                        </form>
+                        <div id="formSuccess" class="form-success hidden">
+                            <i data-lucide="check-circle" class="success-icon"></i>
+                            <h4>¡Solicitud Recibida!</h4>
+                            <p>Nos pondremos en contacto contigo pronto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SERVICIOS -->
+        <section class="section" id="services">
+            <div class="container section-container">
+                <div class="section-header">
+                    <h2>Soluciones Simples</h2>
+                    <p>Diseñamos herramientas digitales sin rodeos.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="layout"></i></div>
+                        <h4>Landing Pages</h4>
+                        <p>Páginas de un solo objetivo, perfectas para captar clientes.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="user-circle"></i></div>
+                        <h4>Portafolios Personales</h4>
+                        <p>Destaca tu trabajo como freelancer con un diseño premium.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="building-2"></i></div>
+                        <h4>Sitios de Negocios</h4>
+                        <p>Presencia oficial para tu restaurante, salón o consultorio.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="briefcase"></i></div>
+                        <h4>Páginas de Servicios</h4>
+                        <p>Explica lo que haces y atrae solicitudes directas.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="shopping-bag"></i></div>
+                        <h4>Tiendas Online</h4>
+                        <p>Catálogos y tiendas básicas para empezar a vender ya.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="calendar"></i></div>
+                        <h4>Sistemas de Reserva</h4>
+                        <p>Agendamiento de citas integrado fácil de usar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PORTFOLIO -->
+        <section class="section alt-bg" id="portfolio">
+            <div class="container section-container">
+                <div class="section-header">
+                    <h2>Calidad de Agencia</h2>
+                    <p>La estética premium que mereces, sin pagar de más.</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="assets/portfolio_barber.png" alt="Barbería moderna" loading="lazy">
+                        <div class="portfolio-overlay"><span>Barbería Local</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="assets/portfolio_restaurant.png" alt="Restaurante Local" loading="lazy">
+                        <div class="portfolio-overlay"><span>Restaurante</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="assets/portfolio_freelancer.png" alt="Freelancer Portfolio" loading="lazy">
+                        <div class="portfolio-overlay"><span>Freelancer</span></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="assets/portfolio_service.png" alt="Negocio de Servicios" loading="lazy">
+                        <div class="portfolio-overlay"><span>Consultoría</span></div>
+                    </div>
+                    <div class="portfolio-item wide-item">
+                        <img src="assets/portfolio_store.png" alt="E-commerce Simple" loading="lazy">
+                        <div class="portfolio-overlay"><span>Tienda Online Simple</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PROCESO (Antes de precios para empujar valor) -->
+        <section class="section" id="process">
+            <div class="container section-container">
+                <div class="section-header">
+                    <h2>Nuestro Proceso</h2>
+                    <p>Fácil, rápido y enfocado en lanzamiento.</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h4>Diseño</h4>
+                            <p>Definimos la estrategia y el estilo visual perfecto.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h4>Desarrollo</h4>
+                            <p>Programamos y optimizamos tu sitio para resultados.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h4>Lanzamiento</h4>
+                            <p>Publicación inmediata y soporte garantizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PRECIOS -->
+        <section class="section alt-bg" id="pricing">
+            <div class="container section-container">
+                <div class="section-header">
+                    <h2>Inversión Clara</h2>
+                    <p>Precios transparentes para todos los niveles.</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="tier">Starter</div>
+                        <div class="price">Desde <span>$100</span></div>
+                        <p class="price-desc">Perfecto para validar tu idea o tener presencia rápida.</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i> 1 Página (Landing/Portfolio)</li>
+                            <li><i data-lucide="check"></i> Diseño optimizado</li>
+                            <li><i data-lucide="check"></i> Formulario de contacto</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Recomendado</div>
+                        <div class="tier">Business</div>
+                        <div class="price"><span>$300</span>-$600</div>
+                        <p class="price-desc">Ideal para negocios locales que necesitan captar clientes.</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i> Multi-página o Landing Pro</li>
+                            <li><i data-lucide="check"></i> SEO Básico incluido</li>
+                            <li><i data-lucide="check"></i> Integración WhatsApp/Reservas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="tier">Pro</div>
+                        <div class="price">Desde <span>$800</span>+</div>
+                        <p class="price-desc">Soluciones avanzadas para marcas y tiendas que ya venden.</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i> E-commerce o a medida</li>
+                            <li><i data-lucide="check"></i> Diseño 100% personalizado</li>
+                            <li><i data-lucide="check"></i> Funciones avanzadas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="maintenance-box">
+                    <i data-lucide="settings"></i>
+                    <div>
+                        <strong>Mantenimiento Mensual (Opcional): $20 - $100</strong>
+                        <p>Nos encargamos de que tu sitio siempre esté rápido, seguro y actualizado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA FINAL -->
+        <section class="final-cta section">
+            <div class="container cta-container">
+                <h2>¿Listo para subir de nivel?</h2>
+                <p>No pierdas más clientes por no tener un sitio web profesional.</p>
+                <a href="#hero-form" class="btn btn-primary btn-lg">Solicitar cotización ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                Branding on Demand Studio
+            </div>
+            <p>&copy; 2026. Soluciones digitales premium.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
