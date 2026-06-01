@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Branding on Demand Studio | Soluciones Digitales Premium</title>
+    <title>North Creative Labs | Soluciones Digitales Premium</title>
     <meta name="description" content="Diseño moderno y soluciones funcionales para freelancers y negocios locales. Premium, accesible y orientado a resultados.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -16,15 +18,24 @@
     <header class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <span class="logo-icon"></span>
-                Branding on Demand
+                <img src="assets/logo.png" alt="North Creative Labs" class="logo-img">
+                <span class="logo-text">North Creative Labs</span>
             </div>
             <nav class="desktop-nav">
-                <a href="#services">Servicios</a>
-                <a href="#portfolio">Portafolio</a>
-                <a href="#pricing">Precios</a>
+                <a href="#services" data-i18n="nav_services">Servicios</a>
+                <a href="#portfolio" data-i18n="nav_portfolio">Portafolio</a>
+                <a href="#about" data-i18n="nav_about">Nosotros</a>
+                <a href="#pricing" data-i18n="nav_pricing">Precios</a>
             </nav>
-            <a href="#hero-form" class="btn btn-outline btn-sm nav-cta">Cotizar Proyecto</a>
+            <div class="nav-actions">
+                <!-- Selector de idioma -->
+                <div class="lang-switcher" role="group" aria-label="Idioma">
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                    <button type="button" class="lang-btn" data-lang="de">DE</button>
+                </div>
+                <a href="#hero-form" class="btn btn-outline btn-sm nav-cta" data-i18n="nav_cta">Cotizar Proyecto</a>
+            </div>
         </div>
     </header>
 
@@ -33,71 +44,71 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <div class="badge">Premium Accesible &centerdot; Rápido</div>
-                    <h1 class="headline">Diseño web que <span class="accent-text">Convierte Visitas</span> en Clientes Reales</h1>
-                    <p class="subheadline">Creación de sitios y soluciones digitales para freelancers y negocios locales. Dejamos las complicaciones atrás y nos enfocamos en tus resultados.</p>
-                    
+                    <div class="badge" data-i18n="hero_badge">Premium Accesible &centerdot; Rápido</div>
+                    <h1 class="headline" data-i18n="hero_headline" data-i18n-html>Diseño web que <span class="accent-text">Convierte Visitas</span> en Clientes Reales</h1>
+                    <p class="subheadline" data-i18n="hero_sub">Creación de sitios y soluciones digitales para freelancers y negocios locales. Dejamos las complicaciones atrás y nos enfocamos en tus resultados.</p>
+
                     <div class="hero-actions">
                         <a href="#hero-form" class="btn btn-primary btn-lg">
-                            Solicitar cotización
+                            <span data-i18n="hero_cta_quote">Solicitar cotización</span>
                             <i data-lucide="arrow-right"></i>
                         </a>
-                        <p class="micro-trust"><i data-lucide="shield-check"></i> Proceso simple. Implementación rápida.</p>
+                        <p class="micro-trust"><i data-lucide="shield-check"></i> <span data-i18n="hero_microtrust">Proceso simple. Implementación rápida.</span></p>
                     </div>
 
                     <!-- 7. CONFIANZA / BULLETS -->
                     <div class="trust-bullets">
-                        <div class="trust-item"><i data-lucide="smartphone"></i> <span>Diseño Responsive</span></div>
-                        <div class="trust-item"><i data-lucide="zap"></i> <span>Entrega Rápida</span></div>
-                        <div class="trust-item"><i data-lucide="headphones"></i> <span>Soporte Incluido</span></div>
-                        <div class="trust-item"><i data-lucide="trending-up"></i> <span>Enfoque en Negocio</span></div>
+                        <div class="trust-item"><i data-lucide="smartphone"></i> <span data-i18n="trust_responsive">Diseño Responsive</span></div>
+                        <div class="trust-item"><i data-lucide="zap"></i> <span data-i18n="trust_fast">Entrega Rápida</span></div>
+                        <div class="trust-item"><i data-lucide="headphones"></i> <span data-i18n="trust_support">Soporte Incluido</span></div>
+                        <div class="trust-item"><i data-lucide="trending-up"></i> <span data-i18n="trust_business">Enfoque en Negocio</span></div>
                     </div>
                 </div>
 
                 <div class="hero-form-wrapper" id="hero-form">
                     <div class="form-card">
-                        <h3>Cuentanos de tu proyecto</h3>
-                        <p class="form-subtitle">Enviaremos una propuesta enseguida.</p>
+                        <h3 data-i18n="form_title">Cuentanos de tu proyecto</h3>
+                        <p class="form-subtitle" data-i18n="form_subtitle">Enviaremos una propuesta enseguida.</p>
                         <form id="leadForm" class="lead-form">
                             <div class="form-group">
-                                <label for="name">Nombre</label>
-                                <input type="text" id="name" required placeholder="Tu nombre o empresa">
+                                <label for="name" data-i18n="form_name_label">Nombre</label>
+                                <input type="text" id="name" required placeholder="Tu nombre o empresa" data-i18n-ph="form_name_ph">
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="project-type">Tipo de proyecto</label>
+                                <label for="project-type" data-i18n="form_type_label">Tipo de proyecto</label>
                                 <div class="select-wrapper">
                                     <select id="project-type" required>
-                                        <option value="" disabled selected>Selecciona una opción</option>
-                                        <option value="negocio">Negocio Local</option>
-                                        <option value="portfolio">Portafolio / CV</option>
-                                        <option value="landing">Landing Page</option>
-                                        <option value="e-commerce">E-commerce</option>
-                                        <option value="otro">Otro tipo de sistema</option>
+                                        <option value="" disabled selected data-i18n="form_type_default">Selecciona una opción</option>
+                                        <option value="negocio" data-i18n="form_type_negocio">Negocio Local</option>
+                                        <option value="portfolio" data-i18n="form_type_portfolio">Portafolio / CV</option>
+                                        <option value="landing" data-i18n="form_type_landing">Landing Page</option>
+                                        <option value="e-commerce" data-i18n="form_type_ecommerce">E-commerce</option>
+                                        <option value="otro" data-i18n="form_type_otro">Otro tipo de sistema</option>
                                     </select>
                                     <i data-lucide="chevron-down" class="select-icon"></i>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="needs">¿Qué necesitas crear?</label>
-                                <input type="text" id="needs" required placeholder="Ej: Una landing para captar leads">
+                                <label for="needs" data-i18n="form_needs_label">¿Qué necesitas crear?</label>
+                                <input type="text" id="needs" required placeholder="Ej: Una landing para captar leads" data-i18n-ph="form_needs_ph">
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="contact-info">Email o Teléfono</label>
-                                <input type="text" id="contact-info" required placeholder="email@ejemplo.com o +54 9...">
+                                <label for="contact-info" data-i18n="form_contact_label">Email o Teléfono</label>
+                                <input type="text" id="contact-info" required placeholder="email@ejemplo.com o +54 9..." data-i18n-ph="form_contact_ph">
                             </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-full">
+
+                            <button type="submit" class="btn btn-primary btn-full" data-i18n="form_submit">
                                 Enviar Solicitud
                             </button>
-                            <p class="form-trust-text"><i data-lucide="clock"></i> Respondemos en menos de 24 horas</p>
+                            <p class="form-trust-text"><i data-lucide="clock"></i> <span data-i18n="form_trust">Respondemos en menos de 24 horas</span></p>
                         </form>
                         <div id="formSuccess" class="form-success hidden">
                             <i data-lucide="check-circle" class="success-icon"></i>
-                            <h4>¡Solicitud Recibida!</h4>
-                            <p>Nos pondremos en contacto contigo pronto.</p>
+                            <h4 data-i18n="form_success_title">¡Solicitud Recibida!</h4>
+                            <p data-i18n="form_success_text">Nos pondremos en contacto contigo pronto.</p>
                         </div>
                     </div>
                 </div>
@@ -108,40 +119,55 @@
         <section class="section" id="services">
             <div class="container section-container">
                 <div class="section-header">
-                    <h2>Soluciones Simples</h2>
-                    <p>Diseñamos herramientas digitales sin rodeos.</p>
+                    <h2 data-i18n="services_title">Soluciones Simples</h2>
+                    <p data-i18n="services_sub">Diseñamos herramientas digitales sin rodeos.</p>
                 </div>
-                
+
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon"><i data-lucide="layout"></i></div>
-                        <h4>Landing Pages</h4>
-                        <p>Páginas de un solo objetivo, perfectas para captar clientes.</p>
+                        <h4 data-i18n="svc_landing_t">Landing Pages</h4>
+                        <p data-i18n="svc_landing_d">Páginas de un solo objetivo, perfectas para captar clientes.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><i data-lucide="user-circle"></i></div>
-                        <h4>Portafolios Personales</h4>
-                        <p>Destaca tu trabajo como freelancer con un diseño premium.</p>
+                        <h4 data-i18n="svc_portfolio_t">Portafolios Personales</h4>
+                        <p data-i18n="svc_portfolio_d">Destaca tu trabajo como freelancer con un diseño premium.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><i data-lucide="building-2"></i></div>
-                        <h4>Sitios de Negocios</h4>
-                        <p>Presencia oficial para tu restaurante, salón o consultorio.</p>
+                        <h4 data-i18n="svc_business_t">Sitios de Negocios</h4>
+                        <p data-i18n="svc_business_d">Presencia oficial para tu restaurante, salón o consultorio.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><i data-lucide="briefcase"></i></div>
-                        <h4>Páginas de Servicios</h4>
-                        <p>Explica lo que haces y atrae solicitudes directas.</p>
+                        <h4 data-i18n="svc_service_t">Páginas de Servicios</h4>
+                        <p data-i18n="svc_service_d">Explica lo que haces y atrae solicitudes directas.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><i data-lucide="shopping-bag"></i></div>
-                        <h4>Tiendas Online</h4>
-                        <p>Catálogos y tiendas básicas para empezar a vender ya.</p>
+                        <h4 data-i18n="svc_store_t">Tiendas Online</h4>
+                        <p data-i18n="svc_store_d">Catálogos y tiendas básicas para empezar a vender ya.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><i data-lucide="calendar"></i></div>
-                        <h4>Sistemas de Reserva</h4>
-                        <p>Agendamiento de citas integrado fácil de usar.</p>
+                        <h4 data-i18n="svc_booking_t">Sistemas de Reserva</h4>
+                        <p data-i18n="svc_booking_d">Agendamiento de citas integrado fácil de usar.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="search"></i></div>
+                        <h4 data-i18n="svc_seo_t">Posicionamiento SEO</h4>
+                        <p data-i18n="svc_seo_d">Aparece en Google y haz que más clientes te encuentren.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="wrench"></i></div>
+                        <h4 data-i18n="svc_admin_t">Administración y Mantenimiento</h4>
+                        <p data-i18n="svc_admin_d">¿Ya tienes web? La administramos y mantenemos siempre segura y actualizada.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i data-lucide="gauge"></i></div>
+                        <h4 data-i18n="svc_optimization_t">Optimización</h4>
+                        <p data-i18n="svc_optimization_d">Mejoramos la velocidad y el rendimiento de tu sitio existente.</p>
                     </div>
                 </div>
             </div>
@@ -151,30 +177,61 @@
         <section class="section alt-bg" id="portfolio">
             <div class="container section-container">
                 <div class="section-header">
-                    <h2>Calidad de Agencia</h2>
-                    <p>La estética premium que mereces, sin pagar de más.</p>
+                    <h2 data-i18n="portfolio_title">Calidad de Agencia</h2>
+                    <p data-i18n="portfolio_sub">La estética premium que mereces, sin pagar de más.</p>
                 </div>
-                
+
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
                         <img src="assets/portfolio_barber.png" alt="Barbería moderna" loading="lazy">
-                        <div class="portfolio-overlay"><span>Barbería Local</span></div>
+                        <div class="portfolio-overlay"><span data-i18n="port_barber">Barbería Local</span></div>
                     </div>
                     <div class="portfolio-item">
                         <img src="assets/portfolio_restaurant.png" alt="Restaurante Local" loading="lazy">
-                        <div class="portfolio-overlay"><span>Restaurante</span></div>
+                        <div class="portfolio-overlay"><span data-i18n="port_restaurant">Restaurante</span></div>
                     </div>
                     <div class="portfolio-item">
                         <img src="assets/portfolio_freelancer.png" alt="Freelancer Portfolio" loading="lazy">
-                        <div class="portfolio-overlay"><span>Freelancer</span></div>
+                        <div class="portfolio-overlay"><span data-i18n="port_freelancer">Freelancer</span></div>
                     </div>
                     <div class="portfolio-item">
                         <img src="assets/portfolio_service.png" alt="Negocio de Servicios" loading="lazy">
-                        <div class="portfolio-overlay"><span>Consultoría</span></div>
+                        <div class="portfolio-overlay"><span data-i18n="port_consulting">Consultoría</span></div>
                     </div>
                     <div class="portfolio-item wide-item">
                         <img src="assets/portfolio_store.png" alt="E-commerce Simple" loading="lazy">
-                        <div class="portfolio-overlay"><span>Tienda Online Simple</span></div>
+                        <div class="portfolio-overlay"><span data-i18n="port_store">Tienda Online Simple</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5.5 SOBRE NOSOTROS -->
+        <section class="section" id="about">
+            <div class="container section-container">
+                <div class="section-header">
+                    <h2 data-i18n="about_title">Sobre Nosotros</h2>
+                    <p data-i18n="about_sub">El equipo detrás de cada proyecto que entregamos.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="assets/team1.jpg" alt="Administradora" loading="lazy"></div>
+                        <h4 data-i18n="team1_name">Nadine</h4>
+                        <span class="team-role" data-i18n="team1_role">Administradora</span>
+                        <p data-i18n="team_desc">Breve descripción de la persona, su experiencia y lo que aporta al equipo.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="assets/team2.jpg" alt="Relaciones Públicas" loading="lazy"></div>
+                        <h4 data-i18n="team2_name">Fraimy</h4>
+                        <span class="team-role" data-i18n="team2_role">Relaciones Públicas</span>
+                        <p data-i18n="team_desc">Breve descripción de la persona, su experiencia y lo que aporta al equipo.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="assets/team3.png" alt="Programador" loading="lazy"></div>
+                        <h4 data-i18n="team3_name">Jeffry</h4>
+                        <span class="team-role" data-i18n="team3_role">Programador</span>
+                        <p data-i18n="team_desc">Breve descripción de la persona, su experiencia y lo que aporta al equipo.</p>
                     </div>
                 </div>
             </div>
@@ -184,30 +241,30 @@
         <section class="section" id="process">
             <div class="container section-container">
                 <div class="section-header">
-                    <h2>Nuestro Proceso</h2>
-                    <p>Fácil, rápido y enfocado en lanzamiento.</p>
+                    <h2 data-i18n="process_title">Nuestro Proceso</h2>
+                    <p data-i18n="process_sub">Fácil, rápido y enfocado en lanzamiento.</p>
                 </div>
-                
+
                 <div class="process-steps">
                     <div class="step">
                         <div class="step-num">01</div>
                         <div class="step-content">
-                            <h4>Diseño</h4>
-                            <p>Definimos la estrategia y el estilo visual perfecto.</p>
+                            <h4 data-i18n="process_design_t">Diseño</h4>
+                            <p data-i18n="process_design_d">Definimos la estrategia y el estilo visual perfecto.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-num">02</div>
                         <div class="step-content">
-                            <h4>Desarrollo</h4>
-                            <p>Programamos y optimizamos tu sitio para resultados.</p>
+                            <h4 data-i18n="process_dev_t">Desarrollo</h4>
+                            <p data-i18n="process_dev_d">Programamos y optimizamos tu sitio para resultados.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-num">03</div>
                         <div class="step-content">
-                            <h4>Lanzamiento</h4>
-                            <p>Publicación inmediata y soporte garantizado.</p>
+                            <h4 data-i18n="process_launch_t">Lanzamiento</h4>
+                            <p data-i18n="process_launch_d">Publicación inmediata y soporte garantizado.</p>
                         </div>
                     </div>
                 </div>
@@ -218,51 +275,51 @@
         <section class="section alt-bg" id="pricing">
             <div class="container section-container">
                 <div class="section-header">
-                    <h2>Inversión Clara</h2>
-                    <p>Precios transparentes para todos los niveles.</p>
+                    <h2 data-i18n="pricing_title">Inversión Clara</h2>
+                    <p data-i18n="pricing_sub">Precios transparentes para todos los niveles.</p>
                 </div>
-                
+
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="tier">Starter</div>
-                        <div class="price">Desde <span>$100</span></div>
-                        <p class="price-desc">Perfecto para validar tu idea o tener presencia rápida.</p>
+                        <div class="price"><span class="price-prefix" data-i18n="price_from">Desde</span> <span>$100</span></div>
+                        <p class="price-desc" data-i18n="starter_desc">Perfecto para validar tu idea o tener presencia rápida.</p>
                         <ul class="features">
-                            <li><i data-lucide="check"></i> 1 Página (Landing/Portfolio)</li>
-                            <li><i data-lucide="check"></i> Diseño optimizado</li>
-                            <li><i data-lucide="check"></i> Formulario de contacto</li>
+                            <li><i data-lucide="check"></i> <span data-i18n="starter_f1">1 Página (Landing/Portfolio)</span></li>
+                            <li><i data-lucide="check"></i> <span data-i18n="starter_f2">Diseño optimizado</span></li>
+                            <li><i data-lucide="check"></i> <span data-i18n="starter_f3">Formulario de contacto</span></li>
                         </ul>
                     </div>
-                    
+
                     <div class="pricing-card featured">
-                        <div class="popular-badge">Recomendado</div>
+                        <div class="popular-badge" data-i18n="popular_badge">Recomendado</div>
                         <div class="tier">Business</div>
                         <div class="price"><span>$300</span>-$600</div>
-                        <p class="price-desc">Ideal para negocios locales que necesitan captar clientes.</p>
+                        <p class="price-desc" data-i18n="business_desc">Ideal para negocios locales que necesitan captar clientes.</p>
                         <ul class="features">
-                            <li><i data-lucide="check"></i> Multi-página o Landing Pro</li>
-                            <li><i data-lucide="check"></i> SEO Básico incluido</li>
-                            <li><i data-lucide="check"></i> Integración WhatsApp/Reservas</li>
+                            <li><i data-lucide="check"></i> <span data-i18n="business_f1">Multi-página o Landing Pro</span></li>
+                            <li><i data-lucide="check"></i> <span data-i18n="business_f2">SEO Básico incluido</span></li>
+                            <li><i data-lucide="check"></i> <span data-i18n="business_f3">Integración WhatsApp/Reservas</span></li>
                         </ul>
                     </div>
-                    
+
                     <div class="pricing-card">
                         <div class="tier">Pro</div>
-                        <div class="price">Desde <span>$800</span>+</div>
-                        <p class="price-desc">Soluciones avanzadas para marcas y tiendas que ya venden.</p>
+                        <div class="price"><span class="price-prefix" data-i18n="price_from">Desde</span> <span>$800</span>+</div>
+                        <p class="price-desc" data-i18n="pro_desc">Soluciones avanzadas para marcas y tiendas que ya venden.</p>
                         <ul class="features">
-                            <li><i data-lucide="check"></i> E-commerce o a medida</li>
-                            <li><i data-lucide="check"></i> Diseño 100% personalizado</li>
-                            <li><i data-lucide="check"></i> Funciones avanzadas</li>
+                            <li><i data-lucide="check"></i> <span data-i18n="pro_f1">E-commerce o a medida</span></li>
+                            <li><i data-lucide="check"></i> <span data-i18n="pro_f2">Diseño 100% personalizado</span></li>
+                            <li><i data-lucide="check"></i> <span data-i18n="pro_f3">Funciones avanzadas</span></li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="maintenance-box">
                     <i data-lucide="settings"></i>
                     <div>
-                        <strong>Mantenimiento Mensual (Opcional): $20 - $100</strong>
-                        <p>Nos encargamos de que tu sitio siempre esté rápido, seguro y actualizado.</p>
+                        <strong data-i18n="maintenance_strong">Mantenimiento Mensual (Opcional): $20 - $100</strong>
+                        <p data-i18n="maintenance_desc">Nos encargamos de que tu sitio siempre esté rápido, seguro y actualizado.</p>
                     </div>
                 </div>
             </div>
@@ -271,9 +328,9 @@
         <!-- 8. CTA FINAL -->
         <section class="final-cta section">
             <div class="container cta-container">
-                <h2>¿Listo para subir de nivel?</h2>
-                <p>No pierdas más clientes por no tener un sitio web profesional.</p>
-                <a href="#hero-form" class="btn btn-primary btn-lg">Solicitar cotización ahora</a>
+                <h2 data-i18n="cta_title">¿Listo para subir de nivel?</h2>
+                <p data-i18n="cta_sub">No pierdas más clientes por no tener un sitio web profesional.</p>
+                <a href="#hero-form" class="btn btn-primary btn-lg" data-i18n="cta_btn">Solicitar cotización ahora</a>
             </div>
         </section>
     </main>
@@ -281,13 +338,14 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="logo">
-                <span class="logo-icon"></span>
-                Branding on Demand Studio
+                <img src="assets/logo.png" alt="North Creative Labs" class="logo-img">
+                <span class="logo-text">North Creative Labs</span>
             </div>
-            <p>&copy; 2026. Soluciones digitales premium.</p>
+            <p data-i18n="footer_copy">&copy; 2026. Soluciones digitales premium.</p>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
     <script>
         lucide.createIcons();

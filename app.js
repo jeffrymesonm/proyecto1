@@ -1,4 +1,53 @@
+/**
+ * Aplica un idioma a toda la página.
+ * Reemplaza el texto de los elementos con data-i18n, los placeholders con
+ * data-i18n-ph y el título del documento. Persiste la elección en localStorage.
+ * @param {string} lang - Código de idioma ('es' | 'en' | 'de').
+ */
+function applyLanguage(lang) {
+    const dict = (typeof translations !== 'undefined') ? translations[lang] : null;
+    if (!dict) return;
+
+    // Textos (textContent) y bloques con HTML embebido (data-i18n-html)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const value = dict[el.getAttribute('data-i18n')];
+        if (value == null) return;
+        if (el.hasAttribute('data-i18n-html')) {
+            el.innerHTML = value;
+        } else {
+            el.textContent = value;
+        }
+    });
+
+    // Placeholders de inputs
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const value = dict[el.getAttribute('data-i18n-ph')];
+        if (value != null) el.setAttribute('placeholder', value);
+    });
+
+    // Metadatos del documento
+    if (dict.doc_title) document.title = dict.doc_title;
+    document.documentElement.lang = lang;
+
+    // Estado activo del selector
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    try { localStorage.setItem('lang', lang); } catch (e) { /* almacenamiento no disponible */ }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Idioma: restaurar preferencia guardada (o español por defecto) y enlazar el selector
+    const savedLang = (() => {
+        try { return localStorage.getItem('lang'); } catch (e) { return null; }
+    })();
+    applyLanguage(savedLang && translations[savedLang] ? savedLang : 'es');
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+    });
+
     // Reveal animations on scroll
     const observerOptions = {
         root: null,
@@ -37,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show loading state
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            btn.innerHTML = 'Enviando...';
+            const currentLang = document.documentElement.lang || 'es';
+            const sendingText = (translations[currentLang] && translations[currentLang].form_sending) || 'Enviando...';
+            btn.innerHTML = sendingText;
             btn.disabled = true;
 
             setTimeout(() => {
